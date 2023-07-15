@@ -1,0 +1,60 @@
+body{
+	margin: 0px auto;
+    max-width: 1080px;
+    padding: 10px 30px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-color: #bbeaff;
+}
+
+header h1 a {
+    color: #ffb3ba;
+    text-decoration: none;
+    font-variant: small-caps;
+}
+
+header h1 a:visited {
+    color: #ff8b94;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 5px;
+    height: 47px;
+}
+
+header li {
+    float: left;
+}
+
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header li a:hover {
+    background-color: #111;
+}
+
+body a {
+    text-decoration: none;
+    color: #5593EE;
+}
+
+body a:hover {
+    color: #A9C5EF;
+}
+
+center {
+   margin: auto;
+}
+
+footer {
+    padding: 20px 0px;
+}
