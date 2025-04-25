@@ -2,3 +2,5 @@
 *.icloud
 font_uncompressed/
 *.py
+*.gif
+giffy
