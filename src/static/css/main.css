@@ -5,37 +5,31 @@ div.letter {
 }
 
 div.letter img {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   object-fit: cover;
+  height: auto;
 }
 
 section.gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
-  margin: 0px;
-  /*  float: left;*/
-  width: 1000px;
-}
-
-section.gallery img {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 0 auto;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  max-width: 1000px;
 }
 
-/* Mobile Styles */
+/* Responsive tweaks handled by auto-fit now, but we can fine-tune if needed */
+
 @media (max-width: 768px) {
-  section.gallery {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* 2 columns for medium screens (tablets) */
+  div.letter img {
+    max-width: 500px;
   }
 }
 
 @media (max-width: 480px) {
-  section.gallery {
-    grid-template-columns: 1fr; /* 1 column for small screens (mobile phones) */
+  div.letter img {
+    max-width: 400px;
   }
 }
