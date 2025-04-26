@@ -15,21 +15,7 @@ section.gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  margin: 0 auto;
+  margin: 1em 3em;
   width: 100%;
   max-width: 1000px;
-}
-
-/* Responsive tweaks handled by auto-fit now, but we can fine-tune if needed */
-
-@media (max-width: 768px) {
-  div.letter img {
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 480px) {
-  div.letter img {
-    max-width: 400px;
-  }
 }
