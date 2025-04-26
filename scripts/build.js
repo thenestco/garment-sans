@@ -56,7 +56,7 @@ async function buildPage(pageName) {
   let finalHTML = baseTemplate
     .replace(
       "{{PAGE_TITLE}}",
-      pageName === "index" ? "The Nest" : `The Nest - ${pageName}`
+      pageName === "index" ? "Garment Sans" : `Garment Sans - ${pageName}`
     )
     .replace('<div id="header-container"></div>', header)
     .replace('<div id="content-container"></div>', pageContent)
