@@ -116,7 +116,7 @@ async function buildLetterPage(letterData) {
 
   // Write the page to the dist directory
   await ensureDir("./dist");
-  await writeFile(`./dist/${letter.toLowerCase()}.html`, finalHTML);
+  await writeFile(`./dist/${letter}.html`, finalHTML);
 }
 
 // Copy static assets
