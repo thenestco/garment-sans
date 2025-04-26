@@ -4,3 +4,6 @@ font_uncompressed/
 *.py
 *.gif
 giffy
+node_modules
+extras
+dist

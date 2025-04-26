@@ -1,0 +1,41 @@
+@import url("https://nest.garmentsans.com/static/css/main.css");
+
+div.letter {
+  text-align: center;
+}
+
+div.letter img {
+  width: 700px;
+  object-fit: cover;
+}
+
+section.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  margin: 0px;
+  /*  float: left;*/
+  width: 1000px;
+}
+
+section.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  section.gallery {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns for medium screens (tablets) */
+  }
+}
+
+@media (max-width: 480px) {
+  section.gallery {
+    grid-template-columns: 1fr; /* 1 column for small screens (mobile phones) */
+  }
+}

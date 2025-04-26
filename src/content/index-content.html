@@ -1,0 +1,80 @@
+<section class="page-intro">
+  <p>
+    the nude typeface! a marriage between a curiosity for design and type with a
+    love of being naked in nature. <br />we often lack the language to talk
+    about humans and nature as one and the same. a typeface is inherently human,
+    but it doesn't have to be. <br /><br />medium: 35mm film
+  </p>
+</section>
+
+<section class="gallery" id="gallery">
+  <script>
+    const galleryData = [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z",
+      "!",
+      "qmark",
+      "dot",
+      "comma",
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    galleryData.forEach((letter) => {
+      const altText =
+        letter === "qmark"
+          ? "?"
+          : letter === "dot"
+          ? "."
+          : letter === "comma"
+          ? ","
+          : letter;
+
+      const link = document.createElement("a");
+      link.href = `${letter}.html`;
+
+      const img = document.createElement("img");
+      img.src = `static/img/${letter}.jpg`;
+      img.alt = altText;
+      img.className = "gallery__img";
+      img.loading = "lazy";
+
+      link.appendChild(img);
+      gallery.appendChild(link);
+    });
+  </script>
+</section>
+
+<section>
+  <h2>About</h2>
+  <p>
+    Models: finch, pigeon, ducky, sap, jac, a, w <br />
+    Locations: hoyt's crossing, ca; baker beach, ca; echo lake, ca; death
+    valley, ca; searles, ca; albany bulb, ca; santa cruz island, ca; hillside
+    natural area, ca; sibley preserve, ca; wildcat canyon, ca
+  </p>
+</section>
