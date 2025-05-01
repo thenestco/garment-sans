@@ -1,16 +1,24 @@
 <header>
   <div class="dropdown" id="dropdown">
-    <button onclick="toggleDropdown()" class="dropbtn">
-      <h1>&#9660; <a href="index.html">garment sans</a></h1>
-    </button>
-    <div class="dropdown-content">
-      <h1><a href="https://nest.garmentsans.com">the nest</a></h1>
-      <h1><a href="https://film.garmentsans.com">photography</a></h1>
+    <div class="dropdown-container">
+      <button onclick="toggleDropdown()" class="dropbtn">&#9660;</button>
+      <a href="index.html" class="site-title">garment sans</a>
     </div>
+    <nav class="site-nav">
+      <a href="https://nest.garmentsans.com">the nest</a>
+      <a href="https://film.garmentsans.com">photography</a>
+    </nav>
   </div>
   <script>
     function toggleDropdown() {
-      document.getElementById("dropdown").classList.toggle("show");
+      document.querySelector("#dropdown").classList.toggle("open");
+    }
+    function toggleMenu() {
+      const header = document.querySelector("header");
+      header.classList.toggle("open");
     }
   </script>
+
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <nav class="page-nav"></nav>
 </header>
