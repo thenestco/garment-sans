@@ -18,7 +18,7 @@ jobs:
 
       - name: cleanup files
         run: |
-          find dist -mindepth 1 -maxdepth 1 -not -path "./font" -not -path "./static" -exec rm -rf {} \;
+          find dist -mindepth 1 -maxdepth 1 -not -path "dist/font" -not -path "dist/static" -exec rm -rf {} \;
           mv dist/font/* dist/
 
       - name: Deploy to GitHub Pages 🚀
