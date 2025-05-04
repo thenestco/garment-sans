@@ -1,0 +1,221 @@
+// Define a variable for the header width
+$header-width: 250px;
+$background-color: #c2d1c9;
+$header-right-margin: 10px;
+
+/* Global reset and box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+body {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 98vh;
+  padding: 0.5em 0;
+  font-family: apparat, sans-serif;
+  font-style: normal;
+}
+
+header {
+  width: $header-width; // Use the variable for header width
+  height: 100vh;
+  display: flex; /* Change display to flex for header */
+  flex-direction: column; /* Stack header items vertically */
+  margin-right: $header-right-margin;
+  padding: 0;
+  position: fixed;
+  z-index: 1000;
+  text-align: right;
+  color: #000;
+  text-decoration: none;
+  font-variant: small-caps;
+  font-size: x-large;
+
+  a:visited {
+    color: #000;
+  }
+
+  h1 {
+    font-size: xx-large;
+  }
+
+  nav {
+    list-style-type: none;
+    // display: flex; /* Flexbox for nav items */
+    // flex-direction: column; /* Stack nav items vertically */
+    // align-items: right; /* Center-align nav items */
+    gap: 10px; /* Add spacing between nav items */
+
+    a {
+      font-size: large;
+      display: block;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: x-large;
+      margin-top: 20px;
+      // line-height: 1.5;
+    }
+  }
+  .page-nav {
+    // position: relative;
+    margin-top: 50px;
+    font-size: x-large;
+  }
+  .sub-page-nav a {
+    margin: 0px;
+    font-size: large;
+    line-height: 0.1;
+  }
+
+  // Mobile styles for the header
+  @media (max-width: 768px) {
+    position: relative; /* Remove fixed positioning */
+    width: 100%; /* Make the header span the full width */
+    height: auto; /* Adjust height to fit content */
+    float: none; /* Remove float */
+    margin: 0; /* Remove margin */
+    padding: 10px 20px; /* Add padding for spacing */
+    z-index: 1000;
+    text-align: center; /* Center-align header text */
+
+    .page-nav {
+      margin-top: 0;
+    }
+    nav {
+      display: none; /* Initially hide the navigation menu */
+      flex-direction: column; /* Stack menu items vertically */
+      background-color: $background-color;
+      position: absolute;
+      top: 100%; /* Position below the header */
+      left: 0;
+      width: 100%;
+      padding: 10px 0;
+
+      a {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+    }
+
+    &.open nav {
+      display: flex; /* Show the navigation menu when open */
+    }
+  }
+
+  .site-title {
+    text-decoration: none;
+    color: black;
+    font-variant: small-caps;
+    font-size: xx-large;
+    flex: 0;
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .hamburger {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block; /* Show the hamburger icon */
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      text-decoration: none;
+    }
+  }
+}
+
+main {
+  padding: 0.25em 1em;
+  margin-left: $header-width; // Use the same variable for margin-left
+  flex: 1;
+  @media (max-width: 768px) {
+    margin-left: 0; // Reset margin for mobile view
+  }
+
+  h3,
+  figcaption {
+    font-size: x-large;
+    font-variant: small-caps;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: #777;
+    }
+  }
+
+  img,
+  object {
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  section.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 1em auto;
+    width: 100%;
+    padding: 0 1em;
+    max-width: 1000px;
+    box-sizing: border-box;
+  }
+}
+
+footer {
+  clear: both;
+  padding: 1em 1em;
+  bottom: 0;
+}
+
+figcaption {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+figure img {
+  display: block;
+  margin-bottom: 0;
+}
+
+div.letter {
+  text-align: center;
+}
+
+div.letter img {
+  width: 100%;
+  max-width: 700px;
+  object-fit: cover;
+  height: auto;
+}
