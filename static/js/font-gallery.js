@@ -53,7 +53,7 @@ function initializeGallery() {
     link.href = `font/${letter}.html`;
 
     const img = document.createElement("img");
-    img.src = `static/img/font/${letter}.jpg`;
+    img.src = `static/img/${letter}.jpg`;
     img.alt = altText;
     img.className = "gallery__img";
     img.loading = "lazy";
