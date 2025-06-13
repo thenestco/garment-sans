@@ -206,6 +206,7 @@ main section.gallery {
 
 .horizontal-gallery-item {
   display: inline-block;
+  position: relative;
   margin-right: 20px;
   vertical-align: top;
   white-space: normal;
@@ -226,6 +227,27 @@ main section.gallery {
   .horizontal-gallery-item img {
     height: 200px;
   }
+}
+
+.gallery__img--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.horizontal-gallery-item.has-hover:hover .gallery__img--hover {
+  opacity: 1;
+}
+
+.horizontal-gallery-item.has-hover:hover .gallery__img--primary {
+  opacity: 0;
+}
+
+.gallery__img--primary {
+  transition: opacity 0.3s ease;
 }
 
 footer {
