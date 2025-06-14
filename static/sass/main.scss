@@ -67,15 +67,15 @@ header {
     // display: flex; /* Flexbox for nav items */
     // flex-direction: column; /* Stack nav items vertically */
     // align-items: right; /* Center-align nav items */
-    gap: 10px; /* Add spacing between nav items */
+    // gap: 10px; /* Add spacing between nav items */
 
     a {
       font-size: large;
       display: block;
-      padding: 14px 16px;
+      // padding: 14px 16px;
       text-decoration: none;
       font-size: x-large;
-      margin-top: 10px;
+      // margin-top: 10px;
       // line-height: 1.5;
     }
   }
@@ -87,7 +87,7 @@ header {
   .sub-page-nav a {
     margin: 0px;
     font-size: large;
-    line-height: 0.1;
+    // line-height: 0.1;
   }
 
   // Mobile styles for the header
@@ -215,28 +215,14 @@ main {
   max-width: 100%;
 
   &::-webkit-scrollbar {
-    height: 0px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: $background-color;
-    border-radius: 4px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 4px;
-
-    &:hover {
-      background: #555;
-    }
+    display: none;
   }
 }
 
 .horizontal-gallery-item {
   display: inline-block;
   position: relative;
-  margin-right: 10px;
+  margin-right: 7px;
   vertical-align: top;
   white-space: normal;
   text-align: center;
@@ -249,7 +235,6 @@ main {
     height: 80vh;
     width: auto;
     object-fit: cover;
-    border-radius: 4px;
     transition: transform 0.3s ease;
     margin-bottom: 10px;
   }
@@ -257,10 +242,11 @@ main {
   // Mobile responsiveness
   @media (max-width: 768px) {
     img {
-      height: 200px;
+      height: 60vh;
     }
   }
 }
+
 .gallery__img--hover {
   position: absolute;
   top: 0;
@@ -270,14 +256,22 @@ main {
   pointer-events: none;
 }
 
-.horizontal-gallery-item.has-hover:hover .gallery__img--hover {
-  opacity: 1;
+.horizontal-gallery-item.has-hover:hover {
+  .gallery__img--hover {
+    opacity: 1;
+  }
+  .gallery__img--primary {
+    opacity: 0;
+  }
 }
-
-.horizontal-gallery-item.has-hover:hover .gallery__img--primary {
-  opacity: 0;
+.horizontal-gallery-item.has-hover.touch-active {
+  .gallery__img--hover {
+    opacity: 1;
+  }
+  .gallery__img--primary {
+    opacity: 0;
+  }
 }
-
 .gallery__img--primary {
   transition: opacity 0.3s ease;
 }
@@ -307,22 +301,4 @@ div.letter img {
   max-width: 700px;
   object-fit: cover;
   height: auto;
-}
-
-table {
-  border-collapse: separate;
-  -webkit-border-horizontal-spacing: 2px;
-  -webkit-border-vertical-spacing: 2px;
-  text-indent: initial;
-}
-
-td,
-th {
-  display: table-cell;
-  vertical-align: inherit;
-}
-
-td.img {
-  width: 100px;
-  height: 100px;
 }

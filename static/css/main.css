@@ -54,15 +54,12 @@ header h1 {
 }
 header nav {
   list-style-type: none;
-  gap: 10px; /* Add spacing between nav items */
 }
 header nav a {
   font-size: large;
   display: block;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: x-large;
-  margin-top: 10px;
 }
 header .page-nav {
   margin-top: 10px;
@@ -71,7 +68,6 @@ header .page-nav {
 header .sub-page-nav a {
   margin: 0px;
   font-size: large;
-  line-height: 0.1;
 }
 @media (max-width: 768px) {
   header {
@@ -190,24 +186,13 @@ main section.gallery {
   max-width: 100%;
 }
 .horizontal-scroll-container::-webkit-scrollbar {
-  height: 0px;
-}
-.horizontal-scroll-container::-webkit-scrollbar-track {
-  background: #c2d1c9;
-  border-radius: 4px;
-}
-.horizontal-scroll-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  display: none;
 }
 
 .horizontal-gallery-item {
   display: inline-block;
   position: relative;
-  margin-right: 10px;
+  margin-right: 7px;
   vertical-align: top;
   white-space: normal;
   text-align: center;
@@ -219,13 +204,12 @@ main section.gallery {
   height: 80vh;
   width: auto;
   object-fit: cover;
-  border-radius: 4px;
   transition: transform 0.3s ease;
   margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   .horizontal-gallery-item img {
-    height: 200px;
+    height: 60vh;
   }
 }
 
@@ -241,8 +225,14 @@ main section.gallery {
 .horizontal-gallery-item.has-hover:hover .gallery__img--hover {
   opacity: 1;
 }
-
 .horizontal-gallery-item.has-hover:hover .gallery__img--primary {
+  opacity: 0;
+}
+
+.horizontal-gallery-item.has-hover.touch-active .gallery__img--hover {
+  opacity: 1;
+}
+.horizontal-gallery-item.has-hover.touch-active .gallery__img--primary {
   opacity: 0;
 }
 
@@ -276,22 +266,4 @@ div.letter img {
   max-width: 700px;
   object-fit: cover;
   height: auto;
-}
-
-table {
-  border-collapse: separate;
-  -webkit-border-horizontal-spacing: 2px;
-  -webkit-border-vertical-spacing: 2px;
-  text-indent: initial;
-}
-
-td,
-th {
-  display: table-cell;
-  vertical-align: inherit;
-}
-
-td.img {
-  width: 100px;
-  height: 100px;
 }
