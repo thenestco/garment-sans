@@ -56,7 +56,6 @@ header nav {
   list-style-type: none;
 }
 header nav a {
-  font-size: large;
   display: block;
   text-decoration: none;
   font-size: x-large;
@@ -82,8 +81,6 @@ header .sub-page-nav a {
   }
   header .page-nav {
     margin-top: 0;
-  }
-  header nav {
     display: none; /* Initially hide the navigation menu */
     flex-direction: column; /* Stack menu items vertically */
     background-color: #c2d1c9;
@@ -93,7 +90,10 @@ header .sub-page-nav a {
     width: 100%;
     padding: 10px 0;
   }
-  header nav a {
+  header .page-nav .sub-page-nav {
+    justify-content: center;
+  }
+  header .page-nav a {
     padding: 10px;
     border-bottom: 1px solid #ccc;
   }

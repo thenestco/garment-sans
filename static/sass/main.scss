@@ -70,7 +70,6 @@ header {
     // gap: 10px; /* Add spacing between nav items */
 
     a {
-      font-size: large;
       display: block;
       // padding: 14px 16px;
       text-decoration: none;
@@ -103,8 +102,6 @@ header {
 
     .page-nav {
       margin-top: 0;
-    }
-    nav {
       display: none; /* Initially hide the navigation menu */
       flex-direction: column; /* Stack menu items vertically */
       background-color: $background-color;
@@ -113,6 +110,9 @@ header {
       left: 0;
       width: 100%;
       padding: 10px 0;
+      .sub-page-nav {
+        justify-content: center;
+      }
 
       a {
         padding: 10px;
