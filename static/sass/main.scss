@@ -234,6 +234,7 @@ main {
   img {
     height: 80vh;
     width: auto;
+    max-width: none;
     object-fit: cover;
     transition: transform 0.3s ease;
     margin-bottom: 10px;
@@ -242,7 +243,7 @@ main {
   // Mobile responsiveness
   @media (max-width: 768px) {
     img {
-      height: 60vh;
+      height: 70vh;
     }
   }
 }
