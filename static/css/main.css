@@ -210,7 +210,7 @@ main section.gallery {
 }
 @media (max-width: 768px) {
   .horizontal-gallery-item img {
-    height: 60vh;
+    height: 30vh;
   }
 }
 
